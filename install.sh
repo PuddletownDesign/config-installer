@@ -1,11 +1,15 @@
 #!/bin/bash
 
 echo moving to configuration directory
-mkdir ~/Config/Dev/
-cd ~/Config/Dev/
+mkdir ~/Config/
+cd ~/Config/
 
-echo "setting shell as zsh"
-chsh -s /usr/bin/zsh
+echo "upgrading apt-get"
+sudo apt-get update
+
+echo "downloading apt-get packages"
+# try to do this from a generated list in the brew folder
+sudo apt-get install -y zsh curl tree git
 
 echo "downloading oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -15,19 +19,14 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # download zsh and zsh theme
 
-echo "upgrading apt-get"
-apt-get update
 
-echo "downloading apt-get packages"
-# try to do this from a generated list in the brew folder
-apt-get install thefuck tree
+
+
 
 # check to see if there are any needed casks for install
 
-echo "Cloning Atom Configs"
-git clone https://github.com/PuddletownDesign/Atom
-git pull origin linux
-git checkout linux
-
 echo "Installing Atom"
 ./Atom/install.sh
+
+echo "setting shell as zsh"
+chsh -s /usr/bin/zsh
