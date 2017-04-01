@@ -9,7 +9,7 @@ sudo apt-get update
 
 echo "downloading apt-get packages"
 # try to do this from a generated list in the brew folder
-sudo apt-get install -y zsh curl tree git
+sudo apt-get install -y -f zsh curl tree git gconf2 gconf-service libgtk2.0-0 libnotify4 libxtst6 libnss3 gvfs-bin xdg-utils
 
 echo "downloading oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
