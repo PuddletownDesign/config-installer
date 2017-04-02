@@ -9,17 +9,25 @@ echo "Installing brew"
 brew update
 
 echo "downloading brew packages"
+cd ~/Documents/Dev/Brew
 git clone https://github.com/PuddletownDesign/Brew
-./Brew/install.sh
+./install.sh
 cd ~/Documents/Dev/
 
+echo "Installing Git"
+git clone https://github.com/PuddletownDesign/Git
+cd ~/Documents/Dev/Git
+git pull origin mac
+git checkout mac
+./install.sh
+cd ~/Documents/Dev/
 
 echo "Setting up iterm"
 git clone https://github.com/PuddletownDesign/iTerm
 cd ~/Documents/Dev/iTerm
 git pull origin mac
 git checkout mac
-./iTerm/install.sh
+./install.sh
 cd ~/Documents/Dev/
 
 
@@ -28,22 +36,22 @@ git clone https://github.com/PuddletownDesign/Atom
 cd ~/Documents/Dev/Atom
 git pull origin mac
 git checkout mac
-./Atom/install.sh
+./install.sh
 cd ~/Documents/Dev/
+
+echo "downloading oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing zshrc and theme...."
 git clone https://github.com/PuddletownDesign/ZSH
 cd ~/Documents/Dev/ZSH
 git pull origin mac
 git checkout mac
-./ZSH/install.sh
+./install.sh
 cd ~/Documents/Dev/
-
-echo "downloading oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "downloading zsh configuration"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-echo "setting shell as zsh"
-sudo chsh -s /usr/bin/zsh
+echo "Reloading configuration"
+. ~/.zshrc
