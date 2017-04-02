@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd ~/Config/Installer
-git pull origin linux
+git pull origin mac

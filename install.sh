@@ -7,7 +7,6 @@ cd ~/Documents/Dev/
 echo "Installing brew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
-brew install git
 
 echo "downloading brew packages"
 git clone https://github.com/PuddletownDesign/Brew
