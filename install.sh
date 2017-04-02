@@ -40,7 +40,7 @@ git checkout mac
 cd ~/Documents/Dev/
 
 echo "downloading oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 echo "Installing zshrc and theme...."
 git clone https://github.com/PuddletownDesign/ZSH
@@ -53,5 +53,6 @@ cd ~/Documents/Dev/
 echo "downloading zsh configuration"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+chsh -s /bin/zsh
 echo "Reloading configuration"
 . ~/.zshrc
