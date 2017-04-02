@@ -9,8 +9,8 @@ echo "Installing brew"
 brew update
 
 echo "downloading brew packages"
-cd ~/Documents/Dev/Brew
 git clone https://github.com/PuddletownDesign/Brew
+cd ~/Documents/Dev/Brew
 ./install.sh
 cd ~/Documents/Dev/
 
