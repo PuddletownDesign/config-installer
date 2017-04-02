@@ -3,11 +3,15 @@
 Depending on your OS
 
 **Mac**
+
+Download the installer and run it.
 ```
-mkdir ~/Documents/Dev && cd ~/Documents/Dev && git clone https://github.com/PuddletownDesign/config-installer Installer && ./Installer/install.sh
+$ ./install.sh
 ```
+
+You will prompted for your password to install some of the tools.
 
 **Linux**
 ```
-mkdir ~/Config && cd ~/Config && git clone https://github.com/PuddletownDesign/config-installer Installer && git checkout origin/linux && ./Installer/install.sh
+
 ```
