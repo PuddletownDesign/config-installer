@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/Configs/Installer
+cd ~/Configs/config-installer
 git add .
 git commit -m "updated installer preferences"
 git push origin linux

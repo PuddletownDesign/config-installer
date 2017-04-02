@@ -48,6 +48,7 @@ git clone https://github.com/PuddletownDesign/Atom
 cd ~/Config/Atom
 ./Atom/install.sh
 cd ~/Config/
+rm -rf temp/
 
 #download zsh and zsh theme
 echo "setting shell as zsh"

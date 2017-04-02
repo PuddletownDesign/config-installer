@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd ~/Config/Installer
+cd ~/Config/config-installer
 git pull origin linux
