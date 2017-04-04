@@ -47,12 +47,12 @@ Something like this:
 ```
 └── Configs
     ├── Atom
-    ├── Git
+	├── Git
 	├── Linters
-    ├── Vim
-    ├── ZSH
-    ├── ZSH-Theme
-    └── iTerm2
+	├── Vim
+	├── ZSH
+	├── ZSH-Theme
+	└── iTerm2
 ```
 
 I suggest putting the Configs directory someplace that's convenient to access so you can make quick edits to the files and they will be accessible to run git commands.
