@@ -42,6 +42,9 @@ cd ~/Documents/Dev/
 echo "downloading oh-my-zsh"
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
+echo "Installing bin...."
+git clone https://github.com/PuddletownDesign/bin
+
 echo "Installing zshrc and theme...."
 git clone https://github.com/PuddletownDesign/ZSH
 cd ~/Documents/Dev/ZSH
