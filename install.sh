@@ -35,4 +35,4 @@ git checkout linux
 #download zsh and zsh theme
 echo "setting shell as zsh"
 cd ~
-zsh
+chsh -s /bin/zsh
