@@ -9,8 +9,7 @@ sudo apt-get update
 
 echo "downloading apt-get packages"
 # try to do this from a generated list in the brew folder
-sudo apt-get install software-properties-common fonts-inconsolata zsh curl tree python3-dev python-pip python3-pip  -y
-pip3 install --user thefuck
+sudo apt-get install software-properties-common fonts-inconsolata zsh curl tree -y
 
 
 echo "downloading oh-my-zsh"
