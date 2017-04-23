@@ -53,6 +53,14 @@ git checkout mac
 ./install.sh
 cd ~/Documents/Dev/
 
+echo "Installing Launchd hourly github backups for configuration"
+git clone https://github.com/PuddletownDesign/launchd LaunchAgents
+ln -s ~/Documents/Dev/LaunchAgents/com.puddletowndesign.backup.plist ~/Library/LaunchAgents/com.puddletowndesign.backup.plist
+ln -s ~/Documents/Dev/LaunchAgents/com.puddletowndesign.update.plist ~/Library/LaunchAgents/com.puddletowndesign.update.plist
+launchctl load ~/Library/LaunchAgents/com.puddletowndesign.backup.plist
+launchctl load ~/Library/LaunchAgents/com.puddletowndesign.update.plist
+cd ~/Documents/Dev/
+
 echo "downloading zsh configuration"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
