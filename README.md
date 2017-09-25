@@ -57,7 +57,7 @@ Something like this:
 
 I suggest putting the Configs directory someplace that's convenient to access so you can make quick edits to the files and they will be accessible to run git commands.
 
-I'll put mine in `~/Documents/Dev/`
+I'll put mine in `~/Dev/Config/`
 
 *I generally use my `Documents` directory to hold configuration files since so a lot of other applications take the liberty of doing so.*
 
@@ -80,11 +80,11 @@ $ apm list --installed --bare > ~/.atom/packages.list
 
 #### Copy the `.atom` folder contents
 
-Copy the contents of the `~/.atom` directory to the Atom configurations folder (mine is `~/Documents/Dev/Atom`). Make sure to get the hidden `.` files as well. Then navigate to that folder in terminal.
+Copy the contents of the `~/.atom` directory to the Atom configurations folder (mine is `~/Dev/Config/Atom`). Make sure to get the hidden `.` files as well. Then navigate to that folder in terminal.
 
 #### Initialize a new git repo
 
-Initialize a repo in the configuration folder containing Atom (`~/Documents/Dev/Atom`).
+Initialize a repo in the configuration folder containing Atom (`~/Dev/Config/Atom`).
 
 ```
 $  git init
@@ -153,7 +153,7 @@ Symlinks are just like aliases in finder. They are a pointer to a file. The comp
 First delete the original `~/atom` folder. Then create the symlink with:
 
 ```
-$  ln -s ~/Documents/Dev/Atom ~/.atom
+$  ln -s ~/Dev/Config/Atom ~/.atom
 ```
 
 #### Restart atom
@@ -186,10 +186,10 @@ Restart atom and you're done!
 
 ## Getting back your configuration on a new machine
 
-Set up your directory to hold configs and clone atom there. My atom config will be in `~/Documents/Dev/Atom`
+Set up your directory to hold configs and clone atom there. My atom config will be in `~/Dev/Config/Atom`
 
 ```
-$ take ~/Documents/Dev
+$ take ~/Dev/Config
 ```
 
 Clone your github repo. Mine is:
@@ -207,7 +207,7 @@ $ brew cask install atom
 Then create the symlink
 
 ```
-$  ln -s ~/Documents/Dev/Atom ~/.atom
+$  ln -s ~/Dev/Config/Atom ~/.atom
 ```
 
 Install all of the packages
@@ -226,9 +226,9 @@ Let's build two scripts will handle backing up atom and publishing changes and a
 
 We will want to create a shell script that will be run whenever we make changes to our atom config. it will add the changes, commit them and push them to github.
 
-`~/Documents/Dev/Atom/backup.sh`
+`~/Dev/Config/Atom/backup.sh`
 ```
-cd ~/Documents/Dev/Atom
+cd ~/Dev/Config/Atom
 git add .
 git commit -m "updated atom preferences"
 git push origin master
@@ -236,11 +236,11 @@ git push origin master
 
 ### Script 2: Restore
 
-`~/Documents/Dev/Atom/restore.sh`
+`~/Dev/Config/Atom/restore.sh`
 ```
-take ~/Documents/Dev
+take ~/Dev/Config
 git clone https://github.com/PuddletownDesign/Atom
-ln -s ~/Documents/Dev/Atom/ ~/.atom
+ln -s ~/Dev/Config/Atom/ ~/.atom
 brew cask install atom
 apm install --packages-file Atom/packages.list
 ```
@@ -271,10 +271,10 @@ As we start using more tools and refining existing ones these files will grow la
 
 First Create a Directory that will be our repo to for the two files.
 
-I'll create mine at `~/Documents/Dev/Git`. *Replace this path with your own path in the following examples*
+I'll create mine at `~/Dev/Config/Git`. *Replace this path with your own path in the following examples*
 
 ```
-$ take ~/Documents/Dev/Git
+$ take ~/Dev/Config/Git
 ```
 
 Add a `README.md`
