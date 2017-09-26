@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+git remote add upstream https://github.com/PuddletownDesign/Git
+
 echo moving to configuration directory
 mkdir ~/Dev/Config/
 cd ~/Dev/Config/
