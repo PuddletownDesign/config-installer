@@ -44,6 +44,25 @@ You may need to enter your username and password to proceed.
 
 _Sit back relax while the script installs all my development presets_
 
+## One last step
+
+edit a gitconfig file with your information
+
+```bash
+a ~/Dev/Config/Git/.gitconfig
+```
+
+Now edit the file using this template with your information.
+
+```bash
+[user]
+    name = Myname
+    username = MyGithubName
+    email = myEmail
+[include]
+	path = ~/Dev/Config/Git/gitcustom.txt
+```
+
 ## Backing up your changes to github
 
 You can backup all of them at once by running
@@ -60,4 +79,22 @@ backupgit # backs up git
 backupiterm # backs up iterm
 backupatom # backs up atom 
 backupbin # backs up custom binaries
+```
+
+## Pulling my updates and automatically merging them
+
+You can update all of them at once by running
+
+```bash
+updateconfig
+```
+
+or individual ones by running:
+
+```bash
+updatezsh # backs up zsh
+updategit # backs up git
+updateiterm # backs up iterm
+updateatom # backs up atom 
+updatebin # backs up custom binaries
 ```
