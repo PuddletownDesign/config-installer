@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-git remote add upstream https://github.com/PuddletownDesign/Installer
-
 echo moving to configuration directory
 mkdir ~/Dev/Config/
 cd ~/Dev/Config/
@@ -70,3 +67,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 chsh -s /bin/zsh
 echo "Reloading configuration"
 . ~/.zshrc
+
+cd ~/Dev/Config
+rm -rf ~/Dev/Config/config-installer
