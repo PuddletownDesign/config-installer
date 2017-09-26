@@ -4,6 +4,9 @@ echo moving to configuration directory
 mkdir ~/Dev/Config/
 cd ~/Dev/Config/
 
+echo "Installing brew"
+
+
 echo "downloading brew packages"
 git clone https://github.com/PuddletownDesign/Brew
 cd ~/Dev/Config/Brew

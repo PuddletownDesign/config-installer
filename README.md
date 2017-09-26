@@ -6,6 +6,16 @@ Depending on your OS
 
 # Mac Install Instruction
 
+If you don't have brew and git install in your mac install them now. Otherwise skip this step.
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update
+
+brew install git
+```
+
 ## Fork the following repos on github
 
 We will do this so that you will have your own editable copy of your configs, but you can still get updates from me.
@@ -62,6 +72,26 @@ Now edit the file using this template with your information.
 [include]
 	path = ~/Dev/Config/Git/gitcustom.txt
 ```
+
+## Optional steps
+
+### Install full list of brew casks
+
+Check out the full list of applications installed by brew here
+
+```bash
+a ~/Dev/Config/Brew/casks-all.list
+```
+
+Optionally delete or add any apps you would like to install. Then install the list.
+
+```bash
+brew cask install `cat ~/Dev/Config/Brew/casks-all.list`
+```
+
+If you get errors on any just delete them from the list and re-run the command.
+
+In this end this will keep track of all the apps you have installed on your mac. You can run this command if you need to restore your mac.
 
 ## Backing up your changes to github
 
